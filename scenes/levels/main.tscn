@@ -3,18 +3,64 @@
 [ext_resource type="Texture2D" uid="uid://cyctf1waygl2n" path="res://assets/sprites/country-platform-back.png" id="1_y0acb"]
 [ext_resource type="Texture2D" uid="uid://bx4u8ax3vyuts" path="res://assets/sprites/country-platform-forest.png" id="2_j4d2a"]
 [ext_resource type="Texture2D" uid="uid://clslkn5ikqcqv" path="res://assets/sprites/country-platform-tiles-example.png" id="3_u81e1"]
+[ext_resource type="Texture2D" uid="uid://cowfgxh82mhkm" path="res://assets/sprites/pisilohepunane3.png" id="4_j4d2a"]
+[ext_resource type="Script" uid="uid://dry5bihpev6y" path="res://scenes/levels/spritePrueba.gd" id="5_b6bv0"]
+[ext_resource type="Texture2D" uid="uid://bowl0or0cy8yx" path="res://assets/sprites/pisilohe10.png" id="5_u81e1"]
+[ext_resource type="Script" uid="uid://c40t3j2ercnh" path="res://scenes/levels/spritePrueba2.gd" id="7_ubwgw"]
+[ext_resource type="Texture2D" uid="uid://cebfn0p6jge03" path="res://assets/sprites/Captura_de_pantalla_2026-10-09_123045-removebg-preview.png" id="8_7lrji"]
+[ext_resource type="Script" uid="uid://cjpecchn0g3pn" path="res://scenes/levels/spritePrueba3.gd" id="9_rssyh"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7lrji"]
+load_path = "res://.godot/imported/Captura_de_pantalla_2026-10-09_123658-removebg-preview.png-42fff0728d7cf88020b1b65cc68bdb39.ctex"
 
 [node name="Escena" type="Node2D" unique_id=1074660920]
 
 [node name="CountryPlatformBack" type="Sprite2D" parent="." unique_id=460744115]
-position = Vector2(1, 0)
+position = Vector2(478.5, 265.5)
+scale = Vector2(3.4869792, 3.3705356)
 texture = ExtResource("1_y0acb")
 
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1904390870]
+position = Vector2(250, 144)
+texture = ExtResource("8_7lrji")
+script = ExtResource("9_rssyh")
+
 [node name="CountryPlatformForest" type="Sprite2D" parent="." unique_id=1857453597]
-position = Vector2(3, 1)
-scale = Vector2(2.4, 1)
+position = Vector2(478, 265.5)
+scale = Vector2(8.337501, 3.361607)
 texture = ExtResource("2_j4d2a")
 
 [node name="CountryPlatformTilesExample" type="Sprite2D" parent="." unique_id=1960505787]
-position = Vector2(4, 2)
+position = Vector2(476.49994, 268)
+scale = Vector2(3.5130208, 3.3750002)
 texture = ExtResource("3_u81e1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1652451698]
+position = Vector2(136.0625, 464.1875)
+scale = Vector2(5.3587494, 3.1437497)
+texture = ExtResource("4_j4d2a")
+script = ExtResource("5_b6bv0")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1095576197]
+position = Vector2(856, 456)
+scale = Vector2(5.9775, 3.8599997)
+texture = ExtResource("5_u81e1")
+script = ExtResource("7_ubwgw")
+
+[node name="Timer" type="Timer" parent="Sprite2D2" unique_id=1897294874]
+autostart = true
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=827340166]
+position = Vector2(646.5, 195.5)
+scale = Vector2(0.28508785, 0.34000006)
+texture = SubResource("CompressedTexture2D_7lrji")
+script = ExtResource("5_b6bv0")
+
+[node name="Button2" type="Button" parent="." unique_id=166340890]
+offset_left = -4.0
+offset_top = 149.0
+offset_right = 168.27351
+offset_bottom = 199.9507
+text = "Toggle motion"
+
+[connection signal="pressed" from="Button2" to="Sprite2D3" method="_on_button_2_pressed"]

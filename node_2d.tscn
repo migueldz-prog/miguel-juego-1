@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://gs628wiixmjv"]
+
+[ext_resource type="PackedScene" uid="uid://d1sb7o0k5t4f1" path="res://scripts/circulos.tscn" id="1_wtcfe"]
+
+[node name="Node2D" type="Node2D" unique_id=7258718]
+
+[node name="Circulos" parent="." unique_id=1107430866 instance=ExtResource("1_wtcfe")]
+
+[node name="Button" type="Button" parent="." unique_id=2147198136]
+offset_right = 8.0
+offset_bottom = 8.0
