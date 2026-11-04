@@ -9,3 +9,7 @@ proytecto de este modulo optativo.
 21/10/2026
 Estas figuras ahora giran, responden a controles para omverse, nuevo boton para detener 
 una figura y con el timer jugamos con la visibilidad del objeto
+
+
+04/11/2026
+Carpeta esquiva-dragones con la tarea 2.3
