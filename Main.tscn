@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://j8q8t0rcw5le"]
+
+[ext_resource type="Script" uid="uid://bhrb0gkqw2663" path="res://scripts/main.gd" id="1_r0du0"]
+[ext_resource type="Texture2D" uid="uid://cowfgxh82mhkm" path="res://assets/sprites/pisilohepunane3.png" id="1_uu6xs"]
+[ext_resource type="Script" uid="uid://b17pcwe1cko0d" path="res://scripts/player.gd" id="2_r0du0"]
+
+[node name="Main" type="Node2D" unique_id=1707879241]
+script = ExtResource("1_r0du0")
+
+[node name="Player" type="Sprite2D" parent="." unique_id=1336964425]
+position = Vector2(300, 450)
+texture = ExtResource("1_uu6xs")
+script = ExtResource("2_r0du0")
+
+[node name="RoundTimer" type="Timer" parent="." unique_id=1207397292]
+wait_time = 5.0
+one_shot = true
